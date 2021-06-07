@@ -22,6 +22,16 @@
           padding: 0;
       }
 
+      :root{
+	    --blanco: #fff;
+	    --verde: #139A43;
+	  }
+
+		*{
+		  	scrollbar-width: auto;          /* "auto" or "thin" */
+	  		scrollbar-color: var(--verde) var(--blanco);   /* scroll thumb and track */
+		}
+
     </style>
 
     {% block style %}
