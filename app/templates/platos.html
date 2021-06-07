@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block fondo %}{{contexto}}{% endblock %}
+
+{% block contenido %}
+	<div class="container-fluid mt-2 mb-4 text-center">
+	    <div class="container">
+	    	<h3 class="my-5">Primero</h3>
+	      {% for fila in primero %}
+	        <div class="row mt-md-4">
+	            {% for plato in fila %}
+	              <div class="col-sm-12 col-md-4 mt-4 m-md-0 card text-center">
+	              	<p>Nombre Plato</p>
+	                <img class="w-100 bg-dark galeria" src="{{plato.0}}" alt='Plato'>
+	                <p>1$</p>
+	              </div>
+	            {% endfor %}
+	        </div>
+	      {% endfor %}
+	    </div>
+	    <div class="container">
+	      <h3 class="my-5">Segundo</h3>
+	      {% for fila in segundo %}
+	      	<div class="row mt-md-4">
+	            {% for plato in fila %}
+	              <div class="col-sm-12 col-md-4 mt-4 m-md-0 card text-center">
+	              	<p>Nombre Plato</p>
+	                <img class="w-100 bg-dark galeria" src="{{plato.0}}" alt='Plato'>
+	                <p>1$</p>
+	              </div>
+	            {% endfor %}
+	        </div>
+	      {% endfor %}
+	    </div>
+	    <div class="container">
+	    	<h3 class="my-5">Postres</h3>
+	      {% for fila in postre %}
+	        <div class="row mt-md-4">
+	            {% for plato in fila %}
+	              <div class="col-sm-12 col-md-4 mt-4 m-md-0 card text-center">
+	              	<p>Nombre Plato</p>
+	                <img class="w-100 bg-dark galeria" src="{{plato.0}}" alt='Plato'>
+	                <p>1$</p>
+	              </div>
+	            {% endfor %}
+	        </div>
+	      {% endfor %}
+	    </div>
+	</div>
+{% endblock %}

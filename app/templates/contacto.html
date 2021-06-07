@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block fondo %}contacto{% endblock %}
+
+{% block contenido %}
+
+<div class="container w-75 mt-4 d-flex align-items-center">
+		<div class="mapouter mb-4 me-4">
+	      	<div class="gmap_canvas">
+	      		<iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=granada&t=&z=19&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+	      		<a href="https://123movies-to.org"></a><br>
+	      		<style>.mapouter{position:relative;text-align:right;height:40rem;width:40rem;}</style>
+	      		<a href="https://www.embedgooglemap.net">embed map google</a>
+	      		<style>.gmap_canvas {overflow:hidden;background:none!important;height:40rem;width:40rem;}</style>
+	      	</div>
+		</div>
+		<form action="/contacto" method="post" class="col-md-6">
+	        <div class="form-group">
+	          <label for="name" class="text-dark">Nombre</label>
+	          <input type="text" class="form-control" id="name" name="name" placeholder="Nombre" required>
+	          <label for="name" class="text-dark"></label>
+	        </div>
+	        <div class="form-group">
+	          <label for="email" class="text-dark">Email</label>
+	          <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+	          <label for="email" class="text-dark"></label>
+	        </div>
+	        <div class="form-group">
+	          <label for="subject" class="text-dark">Asunto</label>
+	          <input type="text" class="form-control" id="subject" name="subject" placeholder="Asunto" required>
+	          <label for="subject" class="text-dark"></label>
+	        </div>
+	        <div class="form-group">
+	          <label for="area" class="text-dark">Mensaje</label>
+	          <textarea class="form-control" id="area" rows="5" name="message" placeholder="Mensaje"></textarea>
+	        </div>
+	        <div class="d-flex justify-content-center">
+	          <button type="submit" class="btn btn-dark w-25 my-2">Enviar</button>          
+	        </div>
+	    </form>
+</div>
+
+{% endblock %}
